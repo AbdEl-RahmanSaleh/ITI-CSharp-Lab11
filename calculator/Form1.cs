@@ -28,7 +28,7 @@ namespace calculator
         private void btnMultiply_Click_1(object sender, EventArgs e)
         {
             double num1;
-            while (!double.TryParse(txtScreen.Text, out  num1))
+            if (!double.TryParse(txtScreen.Text, out  num1))
             {
                 MessageBox.Show("Please enter a valid number.");
                 txtScreen.Text = ""; 
@@ -43,7 +43,7 @@ namespace calculator
         {
             double num2;
             double Num2;
-            while (!double.TryParse(txtScreen.Text, out num2))
+            if (!double.TryParse(txtScreen.Text, out num2))
             {
                 MessageBox.Show("Please enter a valid number.");
                 txtScreen.Text = "";
